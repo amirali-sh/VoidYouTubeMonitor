@@ -1,0 +1,7 @@
+PyQt5
+PyQtWebEngine
+yt-dlp
+requests
+beautifulsoup4
+Pillow
+python-vlc
