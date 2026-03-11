@@ -1,18 +1,21 @@
 # YouTube Video Monitor
 
-A Python desktop application to monitor multiple YouTube videos. Displays videos as tiles with the ability to add/remove videos, showing title and live status.
+A Windows desktop application to monitor multiple YouTube live streams simultaneously. Displays streams as tiles with embedded playback, live status indicators, and full media controls.
+
+## Download
+
+👉 Download the latest release from the [Releases](../../releases) page — no installation required.
 
 ## Features
 
-- Monitor multiple YouTube videos in a grid layout
-- Display videos as tiles with embedded VLC playback
-- Add and remove videos dynamically
-- Show live status with video titles
+- Watch multiple YouTube streams side by side in a grid layout
+- Embedded video playback (no browser needed)
+- Add and remove streams dynamically
+- Shows live status and video titles
 - Full playback controls (play/pause, seek, volume, mute)
 - Quality selection for different video resolutions
 - Caption/subtitle support
 - Save and load stream collections
-- Open videos in browser as fallback
 
 ## Controls
 
@@ -22,23 +25,27 @@ A Python desktop application to monitor multiple YouTube videos. Displays videos
 - **Mute Button**: Toggle audio mute/unmute
 - **Quality Selector**: Choose video resolution
 - **Caption Selector**: Select subtitle language
-- **Save Streams**: Save current stream list to file
-- **Load Streams**: Load streams from saved file
+- **Save Streams** 💾: Save current stream list to `streams.json`
+- **Load Streams** 📁: Restore streams from `streams.json`
 
-## Setup
+## Running from Source
 
-1. Install Python (if not already installed)
-2. Install dependencies: `pip install -r requirements.txt`
-3. Run the application: `python main.py`
+1. Install Python 3.8+
+2. Install dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
+3. Run:
+   ```
+   python main.py
+   ```
 
-## Requirements
+## Building the Executable
 
-- Python 3.8+
-- VLC media player (for embedded playback)
-- Dependencies listed in requirements.txt
+To build a standalone `.exe` (requires VLC installed on your machine):
 
-## Saving/Loading Streams
+```
+build.bat
+```
 
-- Click "💾 Save Streams" to save your current collection of videos to `streams.json`
-- Click "📁 Load Streams" to load all videos from `streams.json`
-- This makes it easy to restore your favorite streams or share collections
+Output will be in `dist\VoidYouTubeMonitor\`. The build bundles VLC — your friends do **not** need VLC installed to run the exe.
